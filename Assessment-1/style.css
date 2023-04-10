@@ -1,0 +1,331 @@
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    background-color: #EEEEEE;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* for General use */
+.border{
+    border: 2px solid black;
+}
+
+.bgcolor{
+    background-color: white;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.tbl-green{
+    color: #10A760;
+}
+
+.tbl-red{
+    color: #DA3E33;
+}
+
+.tbl-orange{
+    color: #E19133;
+}
+
+.root main .title{
+    font-size: 20px;
+}
+
+.root main table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 25px;
+    overflow-x: auto;
+}
+
+.root main table tr{
+    border-top: 2px solid black;
+}
+
+.root main table .heading{
+    text-align: left;
+    color:#667085;
+    font-weight: 500;
+}
+
+.active{
+    color: #1570EF;
+}
+/* Root */
+.root{
+    display: flex;
+    gap: 3px;
+}
+
+/* Root : Aside */
+.root aside{
+    padding: 20px;
+    border-radius: 5px;
+    width: 20%;
+}
+
+/* Root : Aside : nav : logo-text */
+.root aside .nav .logo-text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.root aside .nav .logo-text .text{
+    font-size: 20px;
+    color: #1570EF;
+    font-weight: 600;
+}
+
+/* Root : Aside : nav : navigation */
+
+.root aside .nav .navigation ul{
+    list-style: none;
+    padding: 10px 5px;
+}
+
+.root aside .nav .navigation ul li a{
+    display: flex;
+    padding: 17px 0px;
+    color: #5D6679;
+    font-size: 16px;
+    position: relative;
+    align-items: center;
+    gap: 18px;
+    cursor: pointer;
+}
+
+#check-box,aside{
+    display: none;
+}
+
+#check-box:checked+aside {
+    display: block;
+}
+
+/* Root : main */
+.root main{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+
+/* Root : Main : Header */
+.root main header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.root main header .search-bar{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 40%;
+}
+
+.root main header .search-bar .search{
+    border: 2px solid #EEEEEE;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.root main header .search-bar .search .input-search{
+    background-image: url(images/search.png);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    text-indent: 25px;
+    border: none;
+    height: 24px;
+    width: 100%;
+}
+
+.root main header .profile-bar{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.root main header .profile-bar .profile{
+    border: none;
+    background-color: transparent;
+}
+.root main header .profile-bar .profile img{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 100%;
+}
+
+
+/* Root : Main : First */
+.root main .first{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 0px 25px;
+}
+
+.root main .first .overview{
+    width: 50%;
+    border-radius: 8px;
+    padding: 20px 16px;
+}
+
+.root main .first .best-selling{
+    width: 50%;
+    border-radius: 8px;
+    padding: 20px 16px;
+}
+
+/* Root : main : Second */
+.root main .second{
+    padding:  0px 25px;
+    margin-bottom: 20px;
+}
+
+.root main .second .product{
+    border-radius: 8px;
+    width: 100%;
+}
+
+.root main .second .product .header-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 16px;
+}
+
+.root main .second .product .header-bar .btn{
+    display: flex;
+    gap: 20px;
+}
+
+.root main .second .product .header-bar .btn .add-product{
+    background-color: #1366D9;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.root main .second .product .header-bar .btn .download-all{
+    border: 2px solid #5D6679;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.root main .second .product-details{
+    padding: 0px 16px;
+}
+
+/* CSS for Mobile */
+
+@media (max-width: 500px){
+
+    body{
+        width: 100%;
+    }
+
+    /* General Use */
+    .root main .title{
+        text-align: center;
+    }
+
+    /* Root */
+    .root{
+        width: 100%;
+    }
+
+    .root main{
+        width: 100%;
+    }
+
+    .root aside{
+        width: 100%;
+    }
+
+    .root main header{
+        width: 100%;
+    }
+
+    .root main header .search-bar .search{
+        display: none;
+    }
+
+    /* Root : Main : First */
+    .root main .first{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .root main .first .overview{
+        width: 100%;
+    }
+
+    .root main .first .best-selling{
+        width: 100%;
+    }
+
+    /* Root : Main : Second */
+    .root main .second{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .root main .second .product{
+        width: 100%;
+        padding: 20px;
+    }
+        
+    .root main .second .product .header-bar{
+        display: block;
+    }
+
+    .root main .second .product .header-bar .btn{
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .root main .second .product .header-bar .title{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    
+    .root main .second .product .product-details{
+        overflow-x: auto;
+    }
+
+    .root main .second .product .product-details table th{
+        padding: 10px;
+    }
+
+    /* .root aside{
+    width: 100%;
+} */
+    /* #check-box:checked+aside {
+
+    } */
+}

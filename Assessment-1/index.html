@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assessment 1</title>
+</head>
+
+<body>
+    <!-- Root element -->
+    <div class="root">
+        <input type="checkbox" id="check-box" hidden />
+
+        <!-- Side Navigation bar -->
+        <aside class="bgcolor">
+            <div class="nav">
+
+                <!-- Logo icon and Name -->
+                <header class="logo-text">
+                    <span class="logo"><img src="images/Logo.png"></span>
+                    <span class="text">KANBAN</span>
+                </header>
+
+                <!-- Navigation Links -->
+                <section class="navigation">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="images/dashboard.png">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/inventry.png">
+                                <span class="active">Inventry</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/reports.png">
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/suppliers.png">
+                                <span>Suppliers</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/orders.png">
+                                <span>Orders</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/manage-store.png">
+                                <span>Manage Stores</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Header : search bar, profile logo, notification icon -->
+            <header class="bgcolor">
+                <section class="search-bar">
+                    <label for="check-box" style="cursor: pointer;"><img src="images/hambuger menu.png"
+                            class="hamburger"></label>
+                    <span class="search">
+                        <input type="text" placeholder="Search product, supplier, order" class="input-search">
+                    </span>
+                </section>
+
+                <section class="profile-bar">
+                    <button class="notification"><img src="images/notification.png"></button>
+                    <button class="profile"><img src="images/profile.png"></button>
+                </section>
+            </header>
+
+
+            <!-- First main card: contains two internal cards - Overview and Best-selling-category -->
+            <div class="first">
+                <div class="overview bgcolor">
+                    <section class="title">
+                        Overview
+                    </section>
+
+                    <section class="tbl">
+                        <table class="table-1">
+                            <tr class="heading">
+                                <th>Category</th>
+                                <th>Annual</th>
+                                <th>Threshold</th>
+                            </tr>
+                            <tr>
+                                <td>Drinks</td>
+                                <td>₹46,000</td>
+                                <td class="tbl-green">6000</td>
+                            </tr>
+                            <tr>
+                                <td>Grocery</td>
+                                <td>₹1,22,000</td>
+                                <td class="tbl-green">8000</td>
+                            </tr>
+                            <tr>
+                                <td>Households</td>
+                                <td>₹2,22,000</td>
+                                <td class="tbl-green">9999</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+
+                <div class="best-selling bgcolor">
+                    <section class="title">
+                        Best selling category
+                    </section>
+
+                    <section class="tbl">
+                        <table class="table-2">
+                            <tr class="heading">
+                                <th>Category</th>
+                                <th>Turn Over</th>
+                                <th>Increase By</th>
+                            </tr>
+                            <tr>
+                                <td>Vegetable</td>
+                                <td>₹26,000</td>
+                                <td class="tbl-green">3.2%</td>
+                            </tr>
+                            <tr>
+                                <td>Instant Food</td>
+                                <td>₹22,000</td>
+                                <td class="tbl-green">2%</td>
+                            </tr>
+                            <tr>
+                                <td>Households</td>
+                                <td>₹22,000</td>
+                                <td class="tbl-green">1.5%</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </div>
+
+
+            <!-- Second main Card : contains Products table-->
+            <div class="second">
+                <div class="product bgcolor">
+                    <header class="header-bar ">
+                        <section class="title">
+                            Products
+                        </section>
+
+                        <span class="btn">
+                            <button class="add-product">Add Product</button>
+                            <button class="download-all">Download All</button>
+                        </span>
+                    </header>
+
+                    <section class="product-details bgcolor">
+                        <table>
+                            <tr class="heading">
+                                <th>Products</th>
+                                <th>Buying Price</th>
+                                <th>Quantity</th>
+                                <th>Threshold Value</th>
+                                <th>Expiry Date</th>
+                                <th>Availability</th>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-green">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-red">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-green">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-red">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-green">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-green">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-red">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-green">In-stock</td>
+                            </tr>
+                            <tr>
+                                <td>Maggi</td>
+                                <td>₹430</td>
+                                <td>43 packets</td>
+                                <td>12 packets</td>
+                                <td>11/12/22</td>
+                                <td class="tbl-orange">In-stock</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
