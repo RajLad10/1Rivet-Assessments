@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 2</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="form-container">
+            <div class="action-buttons">
+                <button type="button" class="status-button">Status</button>
+                
+                <button for="check-box" type="button" class="addcustomer-button">
+                    <label for="check-box" style="cursor: pointer;"> + Add customer </label>
+                </button>
+            
+            </div>
+
+            <input type="checkbox" id="check-box" hidden/>
+            <div class="form-main">
+                <form class="form">
+                    <div class="row-1">
+                        <div class="field-container">
+                            <label for="name">
+                                NAME<sup>*</sup>
+                            </label>
+                            <input type="text" id="name" oninput="nameValidation()" placeholder="Enter Name">
+                            <p id="name-warning">Enter a valid name*</p>
+                        </div>
+
+                        <div class="field-container">
+                            <label for="description">
+                                DESCRIPTION<sup>*</sup>
+                            </label>
+                            <input type="text" id="description" oninput="descriptionValidation()" placeholder="Enter Description">
+                            <p id="description-warning">Length should be min 3 and max 150 characters*</p>
+                        </div>
+
+                        <div class="field-container">
+                            <label for="status">
+                                STATUS<sup>*</sup>
+                            </label>
+                            <select id="status" onclick="statusValidation()">
+                                <option value="0">Select Status</option>
+                                <option value="Open">Open</option>
+                                <option value="Error">Error</option>
+                                <option value="Success">Success</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                            <p id="status-warning">This field is required*</p>
+                        </div>
+                    </div>
+
+                    <div class="row-2">
+                        <div class="field-container">
+                            <label for="rate">
+                                RATE<sup>*</sup>
+                            </label>
+                            <input type="text" id="rate" oninput="rateValidation()" placeholder="Enter Rate">
+                            <p id="rate-warning">Please enter only digits*</p>
+                        </div>
+
+                        <div class="field-container">
+                            <label for="balance">
+                                BALANCE<sup>*</sup>
+                            </label>
+                            <input type="text" id="balance" oninput="balanceValidation()" placeholder="Enter Balance">
+                            <p id="balance-warning">Please enter only digits*</p>
+                        </div>
+
+                        <div class="field-container">
+                            <label for="deposit">
+                                DEPOSIT<sup>*</sup>
+                            </label>
+                            <input type="text" id="deposit" oninput="depositValidation()" placeholder="Enter Deposit">
+                            <p id="deposit-warning">This field is required*</p>
+                        </div>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="reset" class="cancel-button" onclick="hideSaveButton()">Cancel</button>
+                        <button type="button" id="pushBtn" onclick="pushData()" class="save-button">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="table" class="table"></table>
+        </div>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
