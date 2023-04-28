@@ -1,0 +1,40 @@
+{
+  "assessment2": [
+    {
+      "name": "Raj",
+      "description": "Helooo",
+      "status": "Success",
+      "rate": "123",
+      "balance": "456",
+      "deposit": "789",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Revant",
+      "description": "Helloo asjdHGA ASJBHDAS ASHBJDSA Ahb djabsd sdaiwu cyuewb sdhjhsdbds dvsdbk dshjbsddjh",
+      "status": "Inactive",
+      "rate": "111",
+      "balance": "-112",
+      "deposit": "678"
+    },
+    {
+      "name": "Ronak",
+      "description": "aabbccc",
+      "status": "Open",
+      "rate": "000",
+      "balance": "999",
+      "deposit": "888",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Rahul",
+      "description": "I am Rahull",
+      "status": "Error",
+      "rate": "1000",
+      "balance": "2000",
+      "deposit": "300100"
+    }
+  ]
+}

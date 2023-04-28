@@ -1,0 +1,298 @@
+html{
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Global use  */
+button{
+    cursor: pointer;
+}
+
+
+/* Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Main : Form-container */
+.main .form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Main : Form-container : Action-Buttons */
+.main .form-container .action-buttons{
+    padding: 15px 20px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .form-container .action-buttons button{
+    border-radius: 5px;
+    /* height: 30px; */
+    /* font-weight: bold; */
+}
+
+.main .form-container .action-buttons .status-button{
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,.8);
+    width: 100px;
+    font-weight: bold;
+    background-color: white;
+    color: blue;
+    background-image: url(icons/filter.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 10px;
+    text-indent: 20px;
+    padding: 9px 10px 9px 10px;
+    appearance: none;
+}
+
+/* .main .form-container .action-buttons .status-button:{
+    border: 2px solid blue;
+} */
+
+.main .form-container .action-buttons .addcustomer-button{
+    background-color: rgb(140, 140, 254);
+    color: white;
+    /* padding: 0px 10px; */
+    padding: 8px 10px 8px 10px;
+    border: none;  
+}
+
+.main .form-container .action-buttons .addcustomer-button .label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.main .form-container .action-buttons .addcustomer-button .label .customer-text{
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.main .form-container .action-buttons .addcustomer-button .plus-icon{
+    height: 18px;
+    /* color: white; */
+}
+
+/* Main : Form-container : Form-Main */
+
+/* Show/hide form  start */
+.form-main{
+    /* display: none; */
+}
+
+#check-box:checked + .form-main {
+    display: block;
+}
+/* Show/hide form  end  */
+
+
+/* Main : Form-container : Form-Main : Form */
+.main .form-container .form-main .form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main .form-container .form-main .form .field-container label{
+    font-weight: bold;
+    /* padding: 10px 0px 20px 0px; */
+    font-size: small;
+}
+
+.main .form-container .form-main .form .field-container sup, .main .form-container .form-main .form .field-container p{
+    color: red;
+}
+
+
+/* Main : Form-container : Form-Main : Form : Row1 and Row2*/
+.main .form-container .form-main .form .row-1, .main .form-container .form-main .form .row-2{
+    display: flex;
+    gap: 30px;
+    padding: 0px 20px;
+}
+
+.main .form-container .form-main .form .row-1 .field-container, .main .form-container .form-main .form .row-2 .field-container{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .form-container .form-main .form .row-1 .field-container input, .main .form-container .form-main .form .row-2 .field-container input{
+    /* width: 93.5%; */
+    /* height: 30px; */
+    /* flex: 1; */
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.main .form-container .form-main .form input::placeholder{
+    font-weight: 500;
+}
+
+.main .form-container .form-main .form .row-1 .field-container select{
+    /* width: 100%; */
+    /* height: 31px; */
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px 10px;
+    color: gray;
+    margin-top: 10px;
+    appearance: none;
+    background-image: url(icons/dropdown.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-size: 10px;
+}
+
+.main .form-container .form-main .form .row-1 .field-container select::placeholder{
+    font-weight: 500;
+}
+
+.main .form-container .form-main .form .field-container p{
+    display: none;
+}
+
+/* /* Main : Form-container : Form-Main : Form : Form-Buttons */
+.main .form-container .form-main .form .form-buttons{
+    background-color: rgb(241, 241, 255);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.main .form-container .form-main .form .form-buttons button{
+    padding: 8px 13px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.main .form-container .form-main .form .form-buttons .cancel-button{
+    background-color: rgb(101, 101, 101);
+}
+
+.main .form-container .form-main .form .form-buttons .save-button{
+    background-color: rgb(140, 140, 254);
+    display: none;
+}
+
+
+/* Main -> Table-Container */
+.main .table-container{
+    overflow-x: auto;
+}
+
+.main .table-container .table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.main .table-container .table thead{
+    font-weight: bold;
+    text-indent: 10px;
+}
+
+.main .table-container .table tbody{
+    text-indent: 10px;
+}
+
+.main .table-container .table tbody tr:nth-child(even){
+    background-color: rgb(229, 229, 253);
+}
+
+.main .table-container .table tbody tr:nth-child(even) td:first-child{
+    border-left: 3px solid blue;
+}
+
+.main .table-container .table td,.main .table-container .table th{
+    padding: 10px 0px;
+    /* max-width: fit-content; */
+}
+
+.main .table-container .table tbody td span{
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.main .table-container .table tbody td:first-child ,.main .table-container .table tbody td:nth-child(2){
+    font-weight: bold;
+}
+
+.main .table-container .table tbody #action{
+    display: flex;
+    gap: 10px;
+}
+
+.main .table-container .table tbody button{
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.main .table-container .table tbody tr td #edit-button{
+    background-color: rgb(54, 160, 54);
+}
+
+.main .table-container .table tr td #delete-button{
+    background-color: red;
+}
+
+
+
+
+/* CSS for mobile */
+
+@media (max-width: 500px){
+
+    body{
+        width: 100%;
+    }
+
+    .main .form-container .form-main .form .row-1, .main .form-container .form-main .form .row-2{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0px 20px;
+    }
+
+    .main .form-container .form-main .form .row-1 .field-container, .main .form-container .form-main .form .row-2 .field-container{
+        width: 98%;
+    }
+
+    .main .form-container .form-main .form .field-container label{
+        font-size: medium;
+    }
+
+    .main .form-container .form-main .form .row-1 .field-container input, .main .form-container .form-main .form .row-2 .field-container input{
+        height: 40px;
+    }
+
+    .main .form-container .form-main .form .row-1 .field-container select{
+        height: 40px;
+        width: 103%;
+    }
+}
