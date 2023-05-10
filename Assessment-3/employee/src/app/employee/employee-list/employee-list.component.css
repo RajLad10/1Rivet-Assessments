@@ -1,0 +1,28 @@
+body{
+    font-family: sans-serif;
+    
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.edit-btn, .delete-btn{
+    height: 25px;
+}
+
+.addEmp{
+    background-color: rgb(63, 63, 249);
+    border-radius: 4px;
+}
+
+.addEmp a{
+    text-decoration:none;
+    color: white;
+}
+
+.table-container{
+    overflow-x: auto;
+    padding: 20px 20px;
+}

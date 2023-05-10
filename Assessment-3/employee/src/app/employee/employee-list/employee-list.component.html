@@ -1,0 +1,46 @@
+<div>
+    <div class="search-container">
+        <input type="search" class="search-input" placeholder="Search..." [(ngModel)]="textSearch">
+
+        <button class="addEmp">
+            <a routerLink="/add-emp" routerLinkActive="active">Add Employee</a>
+        </button>
+    </div>
+    
+    <div class="table-container">
+    <table border="1" class="table">
+        <thead>
+            <tr *ngFor="let head of headers">
+                <th>ID</th>
+                <th>{{head.firstName}}</th>
+                <th>{{head.lastName}}</th>
+                <th>{{head.email}}</th>
+                <th>{{head.department}}</th>
+                <th>{{head.address}}</th>
+                <th>{{head.number}}</th>
+                <th>{{head.description}}</th>
+                <th>{{head.status}}</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees | search : textSearch">
+                <td>{{employee.id}}</td>
+                <td>{{employee.firstName}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.department}}</td>
+                <td>{{employee.address}}</td>
+                <td>{{employee.number}}</td>
+                <td>{{employee.description | shorten}}</td>
+                <td [ngStyle]="{'color': (employee.status=='Active') ? 'green' : 'red'}">{{employee.status}}</td>
+                
+                <td>
+                    <button><a routerLink="/edit-emp/{{employee.id}}"><img class="edit-btn" src="../../../assets/edit.png"></a></button>
+                    <button (click)="removeEmployee(employee.id)"><img class="delete-btn" src="../../../assets/delete.png"></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

@@ -1,0 +1,17 @@
+body{
+    font-family: sans-serif;
+}
+
+.invalid-feedback{
+    color: red;
+}
+
+.empList{
+    background-color: rgb(63, 63, 249);
+    border-radius: 4px;
+}
+
+.empList a{
+    text-decoration:none;
+    color: white;
+}

@@ -1,0 +1,43 @@
+{
+  "employee": [
+    {
+      "id": "1",
+      "firstName": "Raj",
+      "lastName": "Lad",
+      "email": "raj@gmail.com",
+      "department": "Frontend",
+      "address": "Valsad",
+      "number": "1234567890",
+      "description": "I am Raj",
+      "password": "rajlad10",
+      "confirmPassword": "rajlad10",
+      "status": "Active"
+    },
+    {
+      "firstName": "Praveen",
+      "lastName": "Rai",
+      "email": "praveen@gmail.com",
+      "department": "ba",
+      "address": "Vapi",
+      "number": 1232343456,
+      "description": "I am Praveen Rai",
+      "password": "12qw12qw",
+      "confirmPassword": "12qw12qw",
+      "status": "In Active",
+      "id": 82
+    },
+    {
+      "firstName": "Tatsat",
+      "lastName": "Patel",
+      "email": "tatsat@gmail.com",
+      "department": "devops",
+      "address": "Valsad",
+      "number": "1234567890",
+      "description": "I am tatsat patel",
+      "password": "rajlad10",
+      "confirmPassword": "rajlad10",
+      "status": "In Active",
+      "id": 67
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+
+<button class="empList">
+    <a routerLink="/emp-list" routerLinkActive="active">emp list</a>
+</button>
+<!-- [(ngModel)]="toUpdate.firstName" -->
+
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" required minlength="3"
+            maxlength="25"  [ngClass]="{'is-invalid' : submitted && f['firstName'].errors}">
+            <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
+                <div *ngIf="f['firstName'].errors['required']">First Name is Required</div>
+                <div *ngIf="f['firstName'].errors['minlength']">First Name should be atleast 3 characters</div>
+                <div *ngIf="f['firstName'].errors['maxlength']">First Name should not exceed 25 characters</div>
+            </div>
+        </div>
+
+        <!-- [(ngModel)]="toUpdate.lastName"  -->
+        <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" required minlength="3"
+            maxlength="25" [ngClass]="{'is-invalid' : submitted && f['lastName'].errors}">
+            <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                <div *ngIf="f['lastName'].errors['required']">Last Name is Required</div>
+                <div *ngIf="f['lastName'].errors['minlength']">Last Name should be atleast 3 characters</div>
+                <div *ngIf="f['lastName'].errors['maxlength']">Last Name should not exceed 25 characters</div>
+            </div>
+        </div>
+
+        <!-- [(ngModel)]="toUpdate.email" -->
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email" required
+             [ngClass]="{'is-invalid' : submitted && f['email'].errors}">
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is Required</div>
+                <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+            </div>
+        </div>
+
+        <!-- [(ngModel)]="toUpdate.department" -->
+        <div class="mb-3">
+            <label class="form-label">Department</label>
+            <select class="form-select" formControlName="department" required
+             [ngClass]="{'is-invalid' : submitted && f['department'].errors}">
+                <option value="frontend" selected>Frontend</option>
+                <option value="devops">Devops</option>
+                <option value=".net">.NET</option>
+                <option value="qa">QA</option>
+                <option value="data">Data</option>
+                <option value="ba">BA</option>
+            </select>
+            <div *ngIf="submitted && f['department'].errors" class="invalid-feedback">
+                <div *ngIf="f['department'].errors['required']">Department is Required</div>
+            </div>
+        </div>
+
+        <!-- [(ngModel)]="toUpdate.address" -->
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" formControlName="address" required
+             [ngClass]="{'is-invalid' : submitted && f['address'].errors}">
+            <div *ngIf="submitted && f['address'].errors" class="invalid-feedback">
+                <div *ngIf="f['address'].errors['required']">Address is Required</div>
+            </div>
+        </div>
+
+        <!-- [(ngModel)]="toUpdate.number" -->
+        <div class="mb-3">
+            <label class="form-label">Contact Number</label>
+            <input type="number" class="form-control" formControlName="number" required minlength="10" 
+            maxlength="10"  [ngClass]="{'is-invalid' : submitted && f['number'].errors}">
+            <div *ngIf="submitted && f['number'].errors" class="invalid-feedback">
+                <div *ngIf="f['number'].errors['required']">Contact Number is Required</div>
+                <div *ngIf="f['number'].errors['minlength']">Contact Number should be exactly 10 digits</div>
+                <div *ngIf="f['number'].errors['maxlength']">Contact Number should be exactly 10 digits</div>
+            </div>
+        </div>
+
+        <!-- [(ngModel)]="toUpdate.firstName" -->
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" formControlName="description" required minlength="3"
+            maxlength="150"  [ngClass]="{'is-invalid' : submitted && f['description'].errors}">
+            </textarea>
+            <div *ngIf="submitted && f['description'].errors" class="invalid-feedback">
+                <div *ngIf="f['description'].errors['required']">Description is Required</div>
+                <div *ngIf="f['description'].errors['minlength']">Description should be atleast 3 characters long</div>
+                <div *ngIf="f['description'].errors['maxlength']">Description should not exceed 150 characters</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="text" class="form-control" formControlName="password" required minlength="6" maxlength="25"
+                [ngClass]="{'is-invalid' : submitted && f['password'].errors}">
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is Required</div>
+                <div *ngIf="f['password'].errors['minlength']">Password length must be atleast 6 characters</div>
+                <div *ngIf="f['password'].errors['maxlength']">Password length must not exceed 25 characters</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Confirm Password</label>
+            <input type="text" class="form-control" formControlName="confirmPassword" required
+                [ngClass]="{'is-invalid' : submitted && f['confirmPassword'].errors}">
+            <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+                <div *ngIf="f['confirmPassword'].errors['required']">Confirm Password is Required</div>
+                <div *ngIf="f['confirmPassword'].errors['matching']">Confirm Password does not match</div>
+            </div>
+        </div>
+
+        <!-- [(ngModel)]="toUpdate.status" -->
+        <div class="mb-3">
+            <label class="form-label">Status</label>
+            <br>
+            <input type="radio" name="status" id="active" formControlName="status" required
+            class="form-check-input" checked [ngClass]="{'is-invalid' : submitted && f['status'].errors}" value="Active">
+            <label class="form-check-label" for="active">
+                Active
+            </label>
+
+            <input type="radio" name="status" id="inactive" formControlName="status" required
+            class="form-check-input" [ngClass]="{'is-invalid' : submitted && f['status'].errors}" value="In Active">
+            <label class="form-check-label" for="inactive">
+                In Active
+            </label>
+            <div *ngIf="submitted && f['status'].errors" class="invalid-feedback">
+                <div *ngIf="f['status'].errors['required']">Status is Required</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-primary" type="button" (click)="onReset()">Cancel</button>
+            <input class="btn btn-success" type="submit" value="{{dataID ? 'Update' : 'Submit'}}">
+        </div>
+    </form>
+</div>
